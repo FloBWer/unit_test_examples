@@ -4,25 +4,16 @@ namespace App\Service;
 
 class NumberUtilsService
 {
-    /**
-     * Prüft ob eine Zahl gerade ist
-     */
     public function isEven(int $number): bool
     {
         return $number % 2 === 0;
     }
 
-    /**
-     * Prüft ob eine Zahl ungerade ist
-     */
     public function isOdd(int $number): bool
     {
         return $number % 2 !== 0;
     }
 
-    /**
-     * Prüft ob eine Zahl eine Primzahl ist
-     */
     public function isPrime(int $number): bool
     {
         if ($number < 2) {
@@ -46,10 +37,6 @@ class NumberUtilsService
         return true;
     }
 
-    /**
-     * Berechnet die Fakultät einer Zahl
-     * @throws \InvalidArgumentException wenn $number negativ ist
-     */
     public function factorial(int $number): int
     {
         if ($number < 0) {
@@ -68,9 +55,6 @@ class NumberUtilsService
         return $result;
     }
 
-    /**
-     * Berechnet die Fibonacci-Zahl an Position n
-     */
     public function fibonacci(int $n): int
     {
         if ($n < 0) {
@@ -97,17 +81,11 @@ class NumberUtilsService
         return $b;
     }
 
-    /**
-     * Rundet eine Zahl auf die nächste ganze Zahl
-     */
     public function round(float $number): int
     {
         return (int) round($number);
     }
 
-    /**
-     * Berechnet den absoluten Wert einer Zahl
-     */
     public function absolute(float $number): float
     {
         return abs($number);
